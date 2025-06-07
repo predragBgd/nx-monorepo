@@ -1,10 +1,24 @@
 {
-  "extends": "./tsconfig.base.json",
   "compileOnSave": false,
-  "files": [],
-  "references": [
-    {
-      "path": "./apps/app1"
-    }
-  ]
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "lib": ["es2015", "dom"],
+    "outDir": "./dist",
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "@shared-components/*": ["shared-components/*"]
+    },
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "removeComments": false,
+    "composite": true
+  },
+  "include": ["apps/**/*", "libs/**/*"],
+  "exclude": ["node_modules", "dist"]
 }

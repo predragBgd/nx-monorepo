@@ -5,7 +5,7 @@ import path from 'path';
 
 export default defineConfig(() => ({
   root: __dirname,
-  cacheDir: '../../node_modules/.vite/apps/app1',
+  cacheDir: '../../node_modules/.vite/apps/app2',
   server: {
     port: 4200,
     host: 'localhost',
